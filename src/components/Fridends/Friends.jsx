@@ -1,25 +1,18 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import Friend from "../Friend/Friend";
 
 const Friends = () => {
-    const data=useLoaderData();
-    console.log(data)
-    return (
-        <div>
-            <h3>This is friends component</h3>
-            {
-                data.map(d=>{
-                    return (
-                        <div>
-                            <h1>{d.title}</h1>
-                            <img src={d.thumbnailUrl
-} alt="" />
-                        </div>
-                    )
-                })
-            }
-        </div>
-    );
+  const data = useLoaderData();
+  console.log(data);
+  return (
+    <div>
+      <h3>This is friends component</h3>
+    {
+      data.map(d=><Friend key={d.id}  user={d}/>)
+    }
+    </div>
+  );
 };
 
 export default Friends;
