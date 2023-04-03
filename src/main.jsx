@@ -11,6 +11,7 @@ import Blog from './components/Blog/Blog';
 import Home from './components/Home/Home';
 import About from './components/About/About'
 import Contract from './components/Contract/Contract'
+import Friends from './components/Fridends/Friends';
 const router=createBrowserRouter([
   {
     path:'',
@@ -23,6 +24,10 @@ const router=createBrowserRouter([
       {
         path:'contract',
         element:<Contract/>
+      },
+      {
+        path:'friends',
+        element:<Friends/>
       }
     ]
    
