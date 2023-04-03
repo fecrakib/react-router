@@ -27,7 +27,8 @@ const router=createBrowserRouter([
       },
       {
         path:'friends',
-        element:<Friends/>
+        element:<Friends/>,
+        loader:()=>fetch('https://jsonplaceholder.typicode.com/photos')
       }
     ]
    
